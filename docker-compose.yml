@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+    teravision:
+      container_name: clair_postgres
+      image: postgres:latest
+      volumes:
+      - "/var/lib/postgresql/data:/var/lib/postgresql/data"
+      ports:
+      - "5432:5432"
+      restart: always
+      build: .
+      expose:
+      - "3000"
+      ports:
+      - "3000"
+      env_file: ./config/config.env
