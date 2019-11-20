@@ -2,8 +2,7 @@ package config
 
 import (	
 	"os"	
-	"github.com/jinzhu/gorm"
-	"github.com/teravision/models"
+	"github.com/jinzhu/gorm"	
 	_ "github.com/lib/pq" 
 )
 
@@ -15,8 +14,4 @@ func InitDB(){
 	if err != nil {
 		panic("failed to connect database")			
 	}	
-}
-
-func Migrate() {
-	DB.AutoMigrate(models.User{})
 }
