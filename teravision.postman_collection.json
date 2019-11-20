@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "764b8f3b-d175-4f08-bcc9-5c7d2113fd85",
+		"name": "teravision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"gh\",\n \"fiscal_number\": \"44\",\n \"birthdate\": \"1996-12-29\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/v1/user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a7ff5022-4fd3-4c82-97a0-80316a65f14d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8542e11c-b001-4bff-8210-53e39258bee9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "eb5d6e2c-65e2-46d7-8d48-f556855805e0",
+			"key": "domain",
+			"value": "127.0.0.1:3000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
