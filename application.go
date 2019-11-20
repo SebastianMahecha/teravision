@@ -8,7 +8,10 @@ import (
 
 func main() {
 	
+	//open database connection
 	config.InitDB()
+	//migrate models
+	config.Migrate()
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
 
@@ -18,7 +21,6 @@ func main() {
 	v1.POST("/user", controllers.SaveUser)		
 	
 	// Start and run the server
-	router.Run(":3000")
-	
+	router.Run(":3000")	
 }
 	
