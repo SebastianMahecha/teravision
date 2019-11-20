@@ -3,11 +3,12 @@ package main
 import (	
 	"github.com/gin-gonic/gin"	
 	"github.com/teravision/controllers"
+	"github.com/teravision/config"
 )
 
 func main() {
 	
-
+	config.InitDB()
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
 
