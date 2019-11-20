@@ -42,12 +42,28 @@
 1. Import the following collection into PostMan: \
     `teravision.postman_collection.json` 
 2. Parameterize the {{domain}} variable of your collection. Example: \
+    Request \
     `http://127.0.0.1:3000/api/v1/user` \
     `{
         "name": "Juan Sebastian Mahecha Macias",
         "fiscal_number": "10706541587",
         "birthdate": "1996-12-29"
     }` 
+    Error Response - Http Status 400 \
+    `{
+        "data": {
+            "error_code": "general_error",
+            "message": "User not saved successfully. Error: User already exists."
+        },
+        "status": "error"
+    }` \
+    Success Response - Http Status 200 \
+    `{
+        "data": {
+            "message": "User saved successfully"
+        },
+        "status": "success"
+    }`
 
 3. Modify the json of the body and send several requests 
 
